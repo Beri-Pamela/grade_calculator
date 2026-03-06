@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎓 Grade Calculator</h1>
+    <p class="subtitle">Upload your student data and calculate grades instantly</p>
+
+    <div class="form-group">
+        <label for="filePath">Input File Path</label>
+        <input type="text" id="filePath" placeholder="e.g. C:\Users\YourName\students.csv"/>
+        <small>Supported formats: .csv, .xlsx, .txt</small>
+    </div>
+
+    <div class="form-group">
+        <label for="outputPath">Output File Path</label>
+        <input type="text" id="outputPath" placeholder="e.g. C:\Users\YourName\results.xlsx"/>
+        <small>Results will be saved as an Excel file</small>
+    </div>
+
+    <button id="calculateBtn" onclick="calculate()">Calculate Grades</button>
+
+    <div id="errorBox" class="error-box" style="display:none;"></div>
+
+    <div id="resultsSection" style="display:none;">
+        <h2>Results</h2>
+        <table id="resultsTable">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Score</th>
+                <th>Grade</th>
+            </tr>
+            </thead>
+            <tbody id="resultsBody">
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
